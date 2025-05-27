@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: url("https://cdn.glitch.global/206c16b5-1d8a-490b-81b6-1f5cf3445f7b/FONDO.gif?v=1721507947510");
+  background-size: cover; /* Esto hará que la imagen cubra todo el fondo */
+  background-position: center; /* Esto centrará la imagen */
+  background-repeat: no-repeat; /* Esto evitará que la imagen se repita */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#header-gif {
+  margin-bottom: 20px; /* Espacio entre el GIF y los botones */
+  scale: 120%;
+  padding-left: 35px;
+}
+
+#gif1 {
+  z-index: -1;
+  scale: 100%;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Ajuste para centrar */
+}
+
+#gif2 {
+  z-index: -1;
+  scale: 200%;
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%); /* Ajuste para centrar */
+}
+
+#gif_pregunta {
+  position: fixed;
+  right: -100px;
+  bottom: -100px;
+  scale: 15%;
+  z-index: 9;
+  transform: translate(50%, 50%);
+
+}
+
+
+@font-face {
+  font-family: "MiFuentePixelada";
+  src: url("https://cdn.glitch.global/206c16b5-1d8a-490b-81b6-1f5cf3445f7b/Windows%20Regular.ttf?v=1721508315611")
+       format("woff2"),
+       url("assets/fonts/mi-fuente-pixelada.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#words-container {
+  margin-bottom: 20px;
+}
+
+button {
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #848484;
+  border-bottom: 1px solid #848484;
+  background-color: Fuchsia;
+  padding: 3px 15px 3px 15px;
+  color: white;
+  font-family: "MiFuentePixelada", sans-serif;
+  margin: 1px;
+}
+
+button:hover,
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
+
+#poem-container {
+  margin-top: 20px;
+  font-size: 18px;
+  border: 1px solid fuchsia;
+  padding: 10px;
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  min-height: 50px;
+  font-family: "MiFuentePixelada", sans-serif;
+  color: Fuchsia;
+  text-align: center;
+  line-height: 0.8; 
+
+
+}
+
+#published-poems-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Estilo para la barra de desplazamiento */
+#published-poems-container::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo para el "thumb" o la parte que se mueve de la barra de desplazamiento */
+#published-poems-container::-webkit-scrollbar-thumb {
+  background-color: Fuchsia; /* Color del "thumb" */
+}
+
+/* Estilo para la pista de la barra de desplazamiento */
+#published-poems-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
+
+.published-poem {
+
+  border-bottom: 1px solid Fuchsia;  padding: 10px;  padding: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: Fuchsia;
+  text-align: center;
+  line-height: 0.8; 
+  text-shadow: 0px 0px 10px Fuchsia, 0px 0px 10px Fuchsia, 0px 0px 10px Fuchsia;
+}
+
+.poem-line {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#hover_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: Fuchsia;
+  color: white;
+  font-family: "MiFuentePixelada", sans-serif;
+  padding: 20px;
+  display: none;
+  text-align: center;
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #848484;
+  border-bottom: 1px solid #848484;
+  box-shadow: 0px 0px 10px Fuchsia, 0px 0px 10px Fuchsia, 0px 0px 10px Fuchsia;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  color: white;
+  font-family: "Tangerine", cursive;
+  font-size: 30px;
+  line-height: 0.4; 
+
+}
