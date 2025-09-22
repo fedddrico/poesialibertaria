@@ -148,3 +148,7 @@ gif.addEventListener('mouseleave', () => {
   hoverText.style.display = 'none';
 });
 
+let t, reset=()=>{clearTimeout(t);t=setTimeout(()=>location.reload(),300000)};
+['click','keydown','scroll','mousemove','touchstart'].forEach(e=>addEventListener(e,reset));
+reset();
+
